@@ -7,3 +7,8 @@
 
 -- Variable Mutation --
 Changing the value of a variable
+
+-- Basic Boolean Logic --
+    -AND (&&) => true if ALL are true
+    -OR (||) => true if ONE is true
+    -NOT (!) => invertrs true/false value
