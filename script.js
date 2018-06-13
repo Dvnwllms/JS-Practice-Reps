@@ -105,11 +105,70 @@ if (23 === "23") {
 
 /////////////////////////////////////////////////////
 // Lecture: boolean logic and switch //
-
+/*
 var age = 29;
 
 if (age < 20) {
     console.log('Devon is a teenager');
+} else if (age >= 20 && age < 30) {
+    console.log('Devon is a young man.');
+}else {
+    console.log('Devon is a man.');
+}
+
+var job = 'teacher';
+
+job = prompt('What does Devon do?');
+
+switch (job) {
+    case 'teacher':
+        console.log('Devon taught Liam Neeson his particular set of skills.');
+        break
+    case 'driver':
+        console.log('Devon is Dom Torettos favorite driver.');
+        break
+    case 'cop':
+        console.log('Devon is Batman and fights crime.');
+        break
+    default:
+        console.log('Devon does things.');
+}
+*/
+
+/////////////////////////////////////////////////////
+// CODING CHALLENGE 1 //
+
+var johnAge = 32;
+var dudeAge = 30;
+var johnHeight = 180;
+var dudeHeight = 170;
+
+var johnScore = johnHeight + johnAge * 5;
+// console.log(johnScore);
+
+var dudeScore = dudeHeight + dudeAge * 5;
+// console.log(dudeScore);
+
+/*
+if (johnScore > dudeScore) {
+    console.log('John is the winner with a score of ' + johnScore + ' points!');
+} else if (dudeScore > johnScore) {
+    console.log('Dude is the winner with a score of ' + dudeScore + ' points!');
 } else {
-    console.log('Devon is an adult');
+    console.log('Its a tie!');
+}
+*/
+
+var maryHeight = 150;
+var maryAge = 31;
+var maryScore = maryHeight + maryAge * 5;
+
+if (johnScore > dudeScore && maryScore) {
+    console.log('John is the winner with a score of ' + johnScore + ' points!');
+} else if (dudeScore > johnScore && maryScore) {
+    console.log('Dude is the winner with a score of ' + dudeScore + ' points!');
+} else if (maryScore > johnScore && dudeScore) {
+    console.log('Mary is the winner with a score of ' + maryScore + ' points!');
+} else {
+    console.log('It\'s a three way tie!');
 }
