@@ -137,7 +137,7 @@ switch (job) {
 
 /////////////////////////////////////////////////////
 // CODING CHALLENGE 1 //
-
+/*
 var johnAge = 32;
 var dudeAge = 30;
 var johnHeight = 180;
@@ -157,7 +157,6 @@ if (johnScore > dudeScore) {
 } else {
     console.log('Its a tie!');
 }
-*/
 
 var maryHeight = 150;
 var maryAge = 31;
@@ -172,3 +171,56 @@ if (johnScore > dudeScore && maryScore) {
 } else {
     console.log('It\'s a three way tie!');
 }
+*/
+
+////////////////////////////////////////////////////
+// Functions //
+/*
+function calculateAge (birthYear) {
+    return 2018 - birthYear;
+}
+
+var ageDevon = calculateAge(1989);
+var ageMike = calculateAge(1948);
+var ageJane = calculateAge(1969);
+console.log(ageDevon, ageMike, ageJane);
+
+function yearsUntilRetirement(year, firstName) {
+   var age = calculateAge(year);
+   var retirement = 65 - age;
+   
+   if (retirement > 0) {
+   console.log(firstName + ' retires in ' + retirement + ' years.')
+   } else {
+       console.log(firstName + ' is already retired.');
+   }
+}
+
+yearsUntilRetirement(1989, 'Devon');
+yearsUntilRetirement(1948, 'Mike');
+yearsUntilRetirement(1969, 'Jane');
+*/
+
+////////////////////////////////////////////////////
+// Functions Statements and Expressions //
+
+// Function Declaration //
+//function whatDoYouDo(job, firstName) {} //
+
+//Function Expression //
+var whatDoYouDo = function(job, firstName) {
+    switch(job) {
+        case 'teacher':
+            return firstName + ' teaches kids how to code.';
+        case 'driver':
+            return firstname + ' drives a cab in Lisbon.';
+        case 'designer':
+            return firstName + ' design beautiful websites.';
+        default:
+            return firstName + ' does something else.';
+    }
+}
+
+console.log(whatDoYouDo('teacher', 'John'));
+console.log(whatDoYouDo('designer', 'Jane'));
+console.log(whatDoYouDo('retired', 'Mark'));
