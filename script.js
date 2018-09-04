@@ -269,8 +269,8 @@ console.log(isDesigner);
 */
 
 ////////////////////////////////////////////////////
-// Coding Challenge 2 //
-
+// Coding Challenge 3 //
+/*
 function tipCalculator(bill) {
     var percentage;
     if (bill < 50) {
@@ -291,3 +291,97 @@ var finalValues = [bills[0] + tips[0],
                    bills[1] + tips[1],
                    bills[2] + tips[2]];
 console.log(tips, finalValues);
+*/
+
+////////////////////////////////////////////////////
+// Objects and Properties //
+/*
+// Object literal //
+var john = {
+    firstName: 'John',
+    lastName: 'Smith',
+    birthYear: 1990,
+    family: ['Jane', 'Mark', 'Bob', 'Emily'],
+    job: 'teacher',
+    isMarried: false
+};
+console.log(john.firstName);
+console.log(john['lastName']);
+var x = 'birthYear';
+console.log(john[x]);
+
+john.job = 'designer';
+john['isMarried'] = true;
+console.log(john);
+
+// New Object Syntax //
+var jane = new Object();
+jane.firstName = 'Jane';
+jane.birthYear = 1960;
+jane['lastName'] = 'Smith';
+console.log(jane);
+*/
+
+////////////////////////////////////////////////////
+// Objects and Mrthods //
+/*
+var john = {
+    firstName: 'John',
+    lastName: 'Smith',
+    birthYear: 1992,
+    family: ['Jane', 'Mark', 'Bob', 'Emily'],
+    job: 'teacher',
+    isMarried: false,
+    calcAge: function(birthYear) {
+        this.age = 2018 - this.birthYear;
+    }
+};
+
+john.calcAge();
+console.log(john);
+*/
+
+////////////////////////////////////////////////////
+// Coding Challenge 4 //
+
+var mark = {
+    fullName: 'Mark Smith',
+    mass: 200,
+    height: 200,
+    calcHeightTwo: function(height) {
+        this.calcHeightTwo = this.height * this.height;
+    },
+    calcBmi: function(calcHeightTwo) {
+        this.calcBmi = this.mass / this.calcHeightTwo;
+    }
+};
+
+var john = {
+    fullName: 'John Smith',
+    mass: 300,
+    height: 250,
+    calcHeightTwo: function(height) {
+        this.calcHeightTwo = this.height * this.height;
+    },
+    calcBmi: function(calcHeightTwo) {
+        this.calcBmi = this.mass / this.calcHeightTwo;
+    }
+};
+
+mark.calcHeightTwo();
+mark.calcBmi();
+john.calcHeightTwo();
+john.calcBmi();
+
+console.log(mark);
+console.log(john);
+
+if (john.calcBmi > mark.calcBmi) {
+    console.log(john.fullName + ' has the highest BMI which is ' + john.calcBmi);
+} else if (john.calcBmi < mark.calcBmi) {
+    console.log (mark.fullName + ' has the highest BMI which is ' + mark.calcBmi);
+} else if (john.calcBmi = mark.calcBmi) {
+    console.log(john.fullName + ' and ' + mark.fullName + ' have the same BMI.');
+} else {
+    console.log('Something went wrong');
+}
